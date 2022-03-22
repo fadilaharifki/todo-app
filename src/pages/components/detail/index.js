@@ -1,12 +1,21 @@
 import ModalComponent from "../modal";
 import { deleteData } from "../../../store/actions/actionTodo";
 import { useDispatch } from "react-redux";
+import Swal from "sweetalert2";
 export default function Detail({ openDetail, setOpenDetail, open, setOpen, data, index, flag }) {
 
     const dispatch = useDispatch()
 
     const remove = () => {
         dispatch(deleteData(index))
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Success delete data',
+            showConfirmButton: false,
+            timer: 1500
+        })
+        setOpen(false)
     }
 
     return (
@@ -26,7 +35,7 @@ export default function Detail({ openDetail, setOpenDetail, open, setOpen, data,
                     </button>
                     {
                         !flag && (
-                            <button onClick={remove} className="px-6 py-2 ml-2 transition ease-in duration-200 uppercase rounded-full hover:bg-red-600 hover:text-white text-red-600 border-2 border-red-600 focus:outline-none">
+                            <button onClick={remove} className="px-6 py-2 md:ml-2 mt-2 md:mt-0 transition ease-in duration-200 uppercase rounded-full hover:bg-red-600 hover:text-white text-red-600 border-2 border-red-600 focus:outline-none">
                                 Delete
                             </button>
                         )

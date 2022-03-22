@@ -23,15 +23,15 @@ export default function Home() {
             </div>
             <div className="flex justify-between m-5">
                 <div>
-                    <button onClick={() => { setFlag(false); }} className={`px-6 py-2 transition ease-in duration-200 uppercase rounded-full ${!flag ? 'bg-green-600 text-white border-2 border-green-600' : 'hover:bg-orange-600 text-orange-600 border-2 border-orange-600 '} focus:outline-none`}>
+                    <button onClick={() => { setFlag(false); }} className={`px-2 text-sm md:text-base md:px-6 py-2 transition ease-in duration-200 uppercase rounded-full ${!flag ? 'bg-green-600 text-white border-2 border-green-600' : 'hover:bg-orange-600 text-orange-600 hover:text-white border-2 border-orange-600 '} focus:outline-none`}>
                         Status 0
                     </button>
-                    <button onClick={() => setFlag(true)} className={`px-6 py-2 ml-2 transition ease-in duration-200 uppercase rounded-full ${flag ? 'bg-green-600 text-white border-2 border-green-600' : 'hover:bg-orange-600 text-orange-600 border-2 border-orange-600 '}  hover:bg-gray-800 hover:text-white border-2 border-gray-900 focus:outline-none`}>
+                    <button onClick={() => setFlag(true)} className={`px-2 md:px-6 text-sm md:text-base py-2 ml-2 md:mt-0 transition ease-in duration-200 uppercase rounded-full ${flag ? 'bg-green-600 text-white border-2 border-green-600' : 'hover:bg-orange-600 text-orange-600 hover:text-white border-2 border-orange-600 '} focus:outline-none`}>
                         Status 1
                     </button>
                 </div>
                 <div>
-                    <button onClick={() => setOpen(true)} className="px-6 py-2 transition ease-in duration-200 uppercase rounded-full hover:bg-gray-800 hover:text-white border-2 border-gray-900 focus:outline-none">
+                    <button onClick={() => setOpen(true)} className="px-2 md:px-6 text-sm md:text-base py-2 transition ease-in duration-200 uppercase rounded-full hover:bg-gray-800 hover:text-white border-2 border-gray-900 focus:outline-none">
                         Create
                     </button>
                 </div>
